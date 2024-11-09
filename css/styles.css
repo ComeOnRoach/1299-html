@@ -75,6 +75,12 @@ h2 {
 .cats__logo {
   max-width: 63px;
 }
+.cats__logo2 {
+  max-width: 63px;
+  padding-top: 30px;
+  padding-bottom: -15px;
+  
+}
 
 /* FOOTER */
 
