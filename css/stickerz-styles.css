@@ -23,15 +23,40 @@ img {
 
 .header {
   background-color: var(--accent-color);
+
   .header__nav {
     padding: 0 15px;
   }
-  .header__logo {
+
+  @media (min-width: 600px) {
+    .header__nav {
+      display: flex;
+    }
+  }
+
+  .header__logo,
+  .header__title {
     font-size: 3.5rem;
     color: var(--text-color);
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
+  }
+
+  .header__title {
+    color: var(--accent-color);
+  }
+
+  .header__banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url(../img/stickerz/baby-yoda.svg);
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .header__menu {
@@ -46,6 +71,20 @@ img {
       text-decoration: underline;
     }
   }
+
+  @media (min-width: 600px) {
+    .header__menu {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      flex: 1;
+    }
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .button {
