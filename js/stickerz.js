@@ -1,5 +1,6 @@
 function init() {
-    import("./stickerz.header-nav.js");
+    import( `./stickerz.header-nav.js`);
+    import(`./stickerz.header-products.js`);
   }
   
   const totalPartials = document.querySelectorAll(
