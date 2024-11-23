@@ -93,3 +93,7 @@ img {
 .button {
   background-color: var(--accent-color);
 }
+.btn-next__icon,
+.btn-prev__icon {
+  width: 65px;
+}

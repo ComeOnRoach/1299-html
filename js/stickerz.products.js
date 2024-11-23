@@ -34,8 +34,8 @@ const products = [
 ];
 
 function productsRender(products) {
-  const productHtml = "";
-  for (product of products) {
+  let productHtml = '';
+  for (const product of products) {
     productHtml += `
     <article class="products__item">
       <img
@@ -61,4 +61,8 @@ function productsRender(products) {
       </div>
     </article>`;
   }
+
+  document.querySelector(".products__list").innerHTML = productHtml;
 }
+
+productsRender(products);
