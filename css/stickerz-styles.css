@@ -21,11 +21,19 @@ img {
   width: 100%;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .header {
   background-color: var(--accent-color);
 
   .header__nav {
     padding: 0 15px;
+    .clock {
+      translate: transform(0.5);
+    }
   }
 
   @media (min-width: 600px) {
@@ -80,11 +88,6 @@ img {
       flex: 1;
     }
   }
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .button {

@@ -3,6 +3,7 @@
   <head>
     <title>Stickerz</title>
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/stickerz-styles.css" />
     <link
@@ -10,135 +11,23 @@
       href="img/stickerz/baby-yoda.svg"
       type="image/x-icon"
     />
+    <script
+      src="https://unpkg.com/htmx.org@1.9.10"
+      integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <header class="header">
-      <nav class="header__nav container">
-        <div class="header__logo">stickerz</div>
-        <div class="header__menu menu">
-          <a class="menu__item" href="#">home</a>
-          <a class="menu__item" href="#">product</a>
-          <a class="menu__item" href="index.html">cofe menu</a>
-          <a class="menu__item" href="#">contacts</a>
-          <a class="menu__item" href="#">cart</a>
-        </div>
-      </nav>
-      <div class="header__banner container">
-        <h1 class="header__title">Stickerz</h1>
-        <div class="header_buttons">
-          <a href="#" class="button">Shop now</a>
-        </div>
-      </div>
-    </header>
-    <section id="products" class="products container">
-      <h2 class="products_title">Products</h2>
-      <div class="products__list">
-        <article class="products__item">
-          <img
-            class="products__image"
-            src="img/stickerz/baby-yoda.svg"
-            alt="baby-yoda"
-          />
-          <h3 class="priducts__name">Baby Yoda</h3>
-          <p class="products__description">
-            Lorem ipsum <a href="#">dolor</a> sit amet consectetur, adipisicing
-            elit. Porro fuga autem possimus eveniet facere, non minus magnam
-            obcaecati, tenetur recusandae, corporis itaque suscipit. Vero illo
-            nulla asperiores laudantium tempore porro!
-          </p>
-          <div class="products__actions">
-            <button
-              class="products__button products__button--info button button-card"
-            >
-              Info
-            </button>
-            <button
-              class="products__button products__button--buy button button-card"
-            >
-              Buy
-            </button>
-          </div>
-        </article>
-        <article class="products__item">
-          <img
-            class="products__image"
-            src="img/stickerz/banana.svg"
-            alt="baby-yoda"
-          />
-          <h3 class="priducts__name">Banana</h3>
-          <p class="products__description">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro fuga
-            autem possimus eveniet facere, non minus magnam obcaecati, tenetur
-            recusandae, corporis itaque suscipit. Vero illo nulla asperiores
-            laudantium tempore porro!
-          </p>
-          <div class="products__actions">
-            <button
-              class="products__button products__button--info button button-card"
-            >
-              Info
-            </button>
-            <button
-              class="products__button products__button--buy button button-card"
-            >
-              Buy
-            </button>
-          </div>
-        </article>
-        <article class="products__item">
-          <img
-            class="products__image"
-            src="img/stickerz/girl.svg"
-            alt="baby-yoda"
-          />
-          <h3 class="priducts__name">Girl</h3>
-          <p class="products__description">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro fuga
-            autem possimus eveniet facere, non minus magnam obcaecati, tenetur
-            recusandae, corporis itaque suscipit. Вero illo nulla asperiores
-            laudantium tempore porro!
-          </p>
-          <div class="products__actions">
-            <button
-              class="products__button products__button--info button button-card"
-            >
-              Info
-            </button>
-            <button
-              class="products__button products__button--buy button button-card"
-            >
-              Buy
-            </button>
-          </div>
-        </article>
-        <article class="products__item">
-          <img
-            class="products__image"
-            src="img/stickerz/viking.svg"
-            alt="baby-yoda"
-          />
-          <h3 class="priducts__name">Viking</h3>
-          <p class="products__description">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro fuga
-            autem possimus eveniet facere, non minus magnam obcaecati, tenetur
-            recusandae, corporis itaque suscipit. Вero illo nulla asperiores
-            laudantium tempore porro!
-          </p>
-          <div class="products__actions">
-            <button
-              class="products__button products__button--info button button-card"
-            >
-              Info
-            </button>
-            <button
-              class="products__button products__button--buy button button-card"
-            >
-              Buy
-            </button>
-          </div>
-        </article>
-      </div>
-    </section>
+    <section
+      data-hx-trigger="load"
+      data-hx-swap="outerHTML"
+      data-hx-get="stickerz.header-nav.partial.html"
+    ></section>
+    <section
+      data-hx-trigger="load"
+      data-hx-swap="outerHTML"
+      data-hx-get="stickerz.header-banner.partial.html"
+    ></section>
     <footer id="contacts" class="footer container">
       <h2>Contact <span class="ui-brand">Us</span></h2>
       <form action="" class="footer__contacts">
@@ -147,5 +36,6 @@
         <button class="button button-card">Submit</button>
       </form>
     </footer>
+    <script src="js/stickerz.js"></script>
   </body>
 </html>
